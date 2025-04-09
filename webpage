@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shervin Nosrati – Personal Website</title>
+  <style>
+    /* Base styles: Bauhaus-inspired minimalism with geometric lines and bold text */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    header, nav, main, footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    /* Header with subtle background and bold text */
+    header {
+      text-align: center;
+      background-color: #f2f2f2;
+      margin-bottom: 1rem;
+      border-bottom: 4px solid #222; /* A bold, simple line reminiscent of Bauhaus geometry */
+    }
+
+    header h1 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 2rem;
+    }
+
+    header h2 {
+      font-weight: normal;
+      margin: 0 0 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Profile picture */
+    .profile-pic {
+      display: block;
+      margin: 0.5rem auto 1rem;
+      width: 120px; /* Adjust as needed */
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #222;
+    }
+
+    /* Navigation */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #b10000; /* A bold accent color */
+    }
+
+    /* Section headings */
+    section h2 {
+      border-left: 4px solid #b10000; /* Bold accent line */
+      padding-left: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    section p, li {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 4px solid #222;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <!-- Replace 'your-profile.jpg' with the path/URL to your actual photo -->
+    <img class="profile-pic" src="your-profile.jpg" alt="Photo of Shervin Nosrati" />
+    <h1>Shervin Nosrati</h1>
+    <h2>PhD Student, Cognitive and Information Sciences<br />
+        University of California Merced</h2>
+    <h3>nosrati.shervin@gmail</h3>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a 2nd year PhD student in the Cognitive and Information Sciences Department at the University of California Merced. 
+        My work focuses on understanding how we make sense of abstract concepts, especially space and time.
+      </p>
+      <p>
+        My broader interests include the interplay of culture, language, and individual differences in shaping our conceptual systems. 
+        In my free time, I enjoy taking pictures, watching old samurai movies, and making entirely too much pasta.
+      </p>
+    </section>
+
+    <!-- RESEARCH SECTION -->
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        My research explores how people represent and reason about abstract domains such as space and time. I study how cognitive 
+        processes and linguistic features influence our understanding of these fundamental concepts. 
+        Feel free to contact me if you’re interested in potential collaborations or want to know more about my ongoing projects.
+      </p>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <!-- Use <li> to paste in APA-style citations or any references you have -->
+      <ul>
+        <li>
+         Nosrati, S., Niehorster-Cook, L., & Marghetis, T. (2024). Spatial Construals of Time... Travel. In Proceedings of the Annual Meeting of the Cognitive Science Society (Vol. 46).
+
+        </li>
+        <li>
+          Nosrati, S. (2024). <em>Another Example Title.</em> Conference Proceedings, 89-90.
+        </li>
+        <!-- Add more items as needed or replace with your own references in APA format -->
+      </ul>
+    </section>
+
+    <!-- CV SECTION -->
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p>
+        Download my CV: 
+        <a href="your-cv-file.pdf" target="_blank" rel="noopener noreferrer">[Link to PDF]</a>
+      </p>
+      <p>
+        You can also find a summary of my background, experiences, and achievements in the <a href="#about">About</a> section above.
+      </p>
+    </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Shervin Nosrati – All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
