@@ -83,6 +83,9 @@
       color: var(--text);
       font-weight: 600;
       position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
     nav a::after {
@@ -117,8 +120,21 @@
       margin-bottom: 1rem;
     }
 
+    section svg {
+      vertical-align: middle;
+      margin-right: 0.4rem;
+      width: 1rem;
+      height: 1rem;
+      fill: var(--accent);
+    }
+
     a {
       color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -161,7 +177,12 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#cv">CV</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="https://scholar.google.com/citations?user=Nw2ZQDkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Scholar</a></li>
+      <li>
+        <a href="https://scholar.google.com/citations?user=Nw2ZQDkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2 1 7l11 5 9-4.09V17h2V7z"/></svg>
+          Scholar
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -193,8 +214,14 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:nosrati.shervin@gmail">nosrati.shervin@gmail</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=Nw2ZQDkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">View my profile</a></p>
+      <p>
+        <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><path d="M20 4H4c-1.11 0-2 .89-2 2v0 12c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.11-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:nosrati.shervin@gmail">nosrati.shervin@gmail</a>
+      </p>
+      <p>
+        <svg viewBox="0 0 24 24"><path d="M12 2 1 7l11 5 9-4.09V17h2V7z"/></svg>
+        <a href="https://scholar.google.com/citations?user=Nw2ZQDkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </p>
     </section>
 
   </main>
