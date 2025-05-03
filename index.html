@@ -2,111 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shervin Nosrati – Personal Website</title>
   <style>
-    /* Base styles: Bauhaus-inspired minimalism with geometric lines and bold text */
+    :root {
+      --primary-color: #b10000;
+      --text-color: #222;
+      --bg-color: #ffffff;
+      --light-gray: #f2f2f2;
+      --max-width: 800px;
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #fafafa;
-      color: #333;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
     }
 
     header, nav, main, footer {
-      max-width: 800px;
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
     }
 
-    /* Header with subtle background and bold text */
     header {
       text-align: center;
-      background-color: #f2f2f2;
-      margin-bottom: 1rem;
-      border-bottom: 4px solid #222; /* A bold, simple line reminiscent of Bauhaus geometry */
+      background-color: var(--light-gray);
+      border-bottom: 4px solid var(--text-color);
     }
 
     header h1 {
-      margin: 0.5rem 0 0.2rem;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin-top: 1rem;
     }
 
     header h2 {
-      font-weight: normal;
-      margin: 0 0 1rem;
-      font-size: 1.2rem;
+      font-weight: 400;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
     }
 
-    /* Profile picture */
+    header h3 {
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
     .profile-pic {
-      display: block;
-      margin: 0.5rem auto 1rem;
-      width: 120px; /* Adjust as needed */
-      height: auto;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #222;
+      border: 3px solid var(--text-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-top: 1rem;
     }
 
-    /* Navigation */
     nav ul {
-      list-style-type: none;
-      padding: 0;
+      list-style: none;
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin: 0;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1rem;
     }
 
     nav a {
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
+      color: var(--text-color);
+      font-weight: 600;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #b10000; /* A bold accent color */
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: var(--primary-color);
+      width: 0;
+      transition: width 0.3s ease-in-out;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
     }
 
-    /* Section headings */
-    section h2 {
-      border-left: 4px solid #b10000; /* Bold accent line */
-      padding-left: 0.5rem;
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
       margin-top: 2rem;
-      margin-bottom: 1rem;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      padding-left: 0.6rem;
+      border-left: 4px solid var(--primary-color);
       text-transform: uppercase;
       font-weight: bold;
     }
 
-    section p, li {
+    section p, section li {
       margin-bottom: 1rem;
+    }
+
+    section ul {
+      padding-left: 1.25rem;
+    }
+
+    a {
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      font-size: 0.9em;
-      color: #666;
-      border-top: 4px solid #222;
-      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 4px solid var(--text-color);
+      margin-top: 3rem;
       padding-top: 1rem;
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
 <body>
+
   <!-- HEADER -->
   <header>
-    <!-- Replace 'your-profile.jpg' with the path/URL to your actual photo -->
     <img class="profile-pic" src="your-profile.jpg" alt="Photo of Shervin Nosrati" />
     <h1>Shervin Nosrati</h1>
-    <h2>PhD Student, Cognitive and Information Sciences<br />
-        University of California Merced</h2>
+    <h2>PhD Student, Cognitive and Information Sciences<br>University of California Merced</h2>
     <h3>nosrati.shervin@gmail</h3>
   </header>
 
@@ -123,56 +176,35 @@
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section id="about">
       <h2>About</h2>
-      <p>
-        I am a 2nd year PhD student in the Cognitive and Information Sciences Department at the University of California Merced. 
-        My work focuses on understanding how we make sense of abstract concepts, especially space and time.
-      </p>
-      <p>
-        My broader interests include the interplay of culture, language, and individual differences in shaping our conceptual systems. 
-        In my free time, I enjoy taking pictures, watching old samurai movies, and making entirely too much pasta.
-      </p>
+      <p>I am a 2nd year PhD student in the Cognitive and Information Sciences Department at the University of California Merced. My work focuses on understanding how we make sense of abstract concepts, especially space and time.</p>
+      <p>My broader interests include the interplay of culture, language, and individual differences in shaping our conceptual systems. In my free time, I enjoy taking pictures, watching old samurai movies, and making entirely too much pasta.</p>
     </section>
 
-    <!-- RESEARCH SECTION -->
+    <!-- RESEARCH -->
     <section id="research">
       <h2>Research</h2>
-      <p>
-        My research explores how people represent and reason about abstract domains such as space and time. I study how cognitive 
-        processes and linguistic features influence our understanding of these fundamental concepts. 
-        Feel free to contact me if you’re interested in potential collaborations or want to know more about my ongoing projects.
-      </p>
+      <p>My research explores how people represent and reason about abstract domains such as space and time. I study how cognitive processes and linguistic features influence our understanding of these fundamental concepts. Feel free to contact me if you’re interested in potential collaborations or want to know more about my ongoing projects.</p>
     </section>
 
-    <!-- PUBLICATIONS SECTION -->
+    <!-- PUBLICATIONS -->
     <section id="publications">
       <h2>Publications</h2>
-      <!-- Use <li> to paste in APA-style citations or any references you have -->
       <ul>
-        <li>
-         Nosrati, S., Niehorster-Cook, L., & Marghetis, T. (2024). Spatial Construals of Time... Travel. In Proceedings of the Annual Meeting of the Cognitive Science Society (Vol. 46).
-
-        </li>
-        <li>
-          Nosrati, S. (2024). <em>Another Example Title.</em> Conference Proceedings, 89-90.
-        </li>
-        <!-- Add more items as needed or replace with your own references in APA format -->
+        <li>Nosrati, S., Niehorster-Cook, L., & Marghetis, T. (2024). Spatial Construals of Time... Travel. In <em>Proceedings of the Annual Meeting of the Cognitive Science Society</em> (Vol. 46).</li>
+        <li>Nosrati, S. (2024). <em>Another Example Title.</em> Conference Proceedings, 89–90.</li>
       </ul>
     </section>
 
-    <!-- CV SECTION -->
+    <!-- CV -->
     <section id="cv">
       <h2>Curriculum Vitae</h2>
-      <p>
-        Download my CV: 
-        <a href="your-cv-file.pdf" target="_blank" rel="noopener noreferrer">[Link to PDF]</a>
-      </p>
-      <p>
-        You can also find a summary of my background, experiences, and achievements in the <a href="#about">About</a> section above.
-      </p>
+      <p>Download my CV: <a href="your-cv-file.pdf" target="_blank" rel="noopener noreferrer">[PDF Link]</a></p>
+      <p>You can also find a summary of my background, experiences, and achievements in the <a href="#about">About</a> section above.</p>
     </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
